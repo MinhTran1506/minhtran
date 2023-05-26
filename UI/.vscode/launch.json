@@ -1,0 +1,230 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Launch TreeApp",
+            "request": "launch",
+            "mainClass": "TreeApp",
+            "projectName": "UI_3855161e",
+            //"vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+            //"vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"        
+            "vmArgs": "--module-path \"javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "FractalTree.Main",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeApp",
+            "request": "launch",
+            "mainClass": "FractalTree.TreeApp",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "SpaceRunner.application.Main",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpaceRunner",
+            "request": "launch",
+            "mainClass": "SpaceRunner.SpaceRunner",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch GameMenuDemo",
+            "request": "launch",
+            "mainClass": "FractalTree.GameMenuDemo",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch GameMenu",
+            "request": "launch",
+            "mainClass": "FractalTree.GameMenu",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch FXML_example",
+            "request": "launch",
+            "mainClass": "sample.FXML_example",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch FXML_example",
+            "request": "launch",
+            "mainClass": "FXML_example",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch BindingProperties",
+            "request": "launch",
+            "mainClass": "BindingProperties",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Propertiess",
+            "request": "launch",
+            "mainClass": "Propertiess",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Menuu",
+            "request": "launch",
+            "mainClass": "Menuu",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch TableVieww",
+            "request": "launch",
+            "mainClass": "TableVieww",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeVieww",
+            "request": "launch",
+            "mainClass": "TreeVieww",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Listview",
+            "request": "launch",
+            "mainClass": "Listview",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Combobox",
+            "request": "launch",
+            "mainClass": "Combobox",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Choicebox",
+            "request": "launch",
+            "mainClass": "Choicebox",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckBoxEx",
+            "request": "launch",
+            "mainClass": "CheckBoxEx",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch ValidateInput",
+            "request": "launch",
+            "mainClass": "ValidateInput",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridPaneLayout",
+            "request": "launch",
+            "mainClass": "GridPaneLayout",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridPane",
+            "request": "launch",
+            "mainClass": "GridPane",
+            "projectName": "UI_3855161e"
+        },
+        {
+            "type": "java",
+            "name": "Launch EmbeddingLayouts",
+            "request": "launch",
+            "mainClass": "EmbeddingLayouts",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch CloseProgram",
+            "request": "launch",
+            "mainClass": "CloseProgram",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch AlertBox",
+            "request": "launch",
+            "mainClass": "AlertBox",
+            "projectName": "UI_3855161e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch JavaFxDemo",
+            "request": "launch",
+            "mainClass": "JavaFxDemo",
+            "projectName": "UI_3855161e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "UI_3855161e",
+            "vmArgs": "--module-path \"D:/Coding/Java/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

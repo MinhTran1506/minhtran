@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        "src/FractalTree"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.base.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.controls.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.fxml.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.graphics.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.media.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.swing.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx.web.jar",
+        "d:\\Coding\\Java\\javafx-sdk-19\\lib\\javafx-swt.jar"
+    ]
+}
