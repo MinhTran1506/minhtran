@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#draw" prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TreeController">
+   <children>
+      <Button fx:id="appearButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#draw" prefHeight="38.0" prefWidth="196.0" text="SIUUUUUUUUUUU" />
+      <Button layoutX="14.0" layoutY="275.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="38.0" prefWidth="105.0" text="Return" />
+      <Slider fx:id="mySlider" layoutX="37.0" layoutY="128.0" max="180.0" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" />
+      <Button fx:id="DeleteButton" layoutX="25.0" layoutY="68.0" mnemonicParsing="false" onAction="#deleteTree" prefHeight="38.0" prefWidth="175.0" text="DelTree" />
+   </children>
+</Pane>
