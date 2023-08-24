@@ -2,25 +2,32 @@ import pandas as pd
 import re
 
 
-df = pd.read_csv('DataScientistSalary.csv')
-
-
-# Drop missing value
-df = df.dropna(subset=['Salary Estimate', 'Job Description', 'Company Name', 'Location', 'Size', 'Founded', 'Sector', 'Revenue', 'Industry', 'Type'])
+df = pd.read_csv('glassdoor_jobs.csv')
+df1 = pd.read_csv('glassdoor_jobs.csv')
 
 # Salary parsing
-salary = df['Salary Estimate'].apply(lambda x: x.split(' ')[0])
-minus_Kd = salary.apply(lambda x: x.replace('$', ''))
-minus_comma = minus_Kd.apply(lambda x: x.replace(',', ''))
 
-df['Hourly'] = df['Salary Estimate'].apply(lambda x: 1 if 'hr' in x.lower() else 0)
+df['Hourly'] = df['Salary Estimate'].apply(lambda x: 1 if 'per hour' in x.lower() else 0)
+df['Employer_provided'] = df['Salary Estimate'].apply(lambda x: 1 if 'employer provided' in x.lower() else 0)
 
-df['Salary Estimate'] = minus_comma
-df['Salary Estimate'] = df['Salary Estimate'].apply(lambda  x: float(x))
-df['Salary Estimate'].dtype
+df = df[df['Salary Estimate'] != '-1'] 
+salary = df['Salary Estimate'].apply(lambda x: x.split('(')[0])
+minus_Kd = salary.apply(lambda x: x.replace('K', '').replace('$', ''))
+
+min_hr = minus_Kd.apply(lambda x: x.lower().replace('per hour', '').replace('employer provided salary:', ''))
+
+# Min/Max/Average salary
+df['min_salary'] = min_hr.apply(lambda x: float(x.split('-')[0]))
+df['max_salary'] = min_hr.apply(lambda x: float(x.split('-')[1]))
+df['avg_salary'] = (df.min_salary + df.max_salary) / 2
+
+
+
+print(df['min_salary'].dtype)
 
 # Drop duplicates
 df.drop_duplicates(inplace=True)
+
 
 # Company name text only
 pattern = r'\d+\.\d+'
@@ -28,7 +35,7 @@ df['Company Name'] = [re.sub(pattern, '', line) for line in df['Company Name']]
 
 # Job state
 df['job_state'] = df['Location'].apply(lambda x: x.split(',')[-1])
-
+df['same_state'] = df.apply(lambda x: 1 if x.Location == x.Headquarters else 0, axis=1)
 # Company Age
 df['Age'] = df['Founded'].apply(lambda x: x if x < 1 else 2023 - x)
 
@@ -50,8 +57,7 @@ df['excel'] = df['Job Description'].apply(lambda x: 1 if 'excel' in x.lower() el
 
 
 print(df.head(10))
-print(df.python_yn.value_counts())
-print(df.R_yn.value_counts())
+
 
 df.to_csv("Clean_DataScientistSalary.csv", index=False)
 #print(minus_Kd)

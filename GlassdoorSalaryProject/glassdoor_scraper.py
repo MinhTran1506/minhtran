@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def get_jobs(keyword, num_pages, path, slp_time):
+def get_jobs(keyword, num_pages, path):
     
     '''Gathers jobs as a dataframe, scraped from Glassdoor'''
     
@@ -35,39 +35,41 @@ def get_jobs(keyword, num_pages, path, slp_time):
     company_industry = []
     company_founded = []
     company_revenue = []
-    
+    rating = []
     current_page = 1
+    processed_cards = set()
 
     while current_page <= num_pages:  #If true, should be still looking for new jobs.
 
         #Let the page load. Change this number based on your internet speed.
         #Or, wait until the webpage is loaded, instead of hardcoding it.
-        time.sleep(slp_time)
+        #time.sleep(slp_time)
 
         #Test for the "Sign Up" prompt and get rid of it.
-        try:
-            driver.find_element_by_class_name("selected").click()
-        except ElementClickInterceptedException:
-            pass
+        #try:
+        #    driver.find_element_by_class_name("selected").click()
+        #except ElementClickInterceptedException:
+        #    pass
 
-        time.sleep(.1)
+        #time.sleep(.1)
 
-        try:
-            close_button = driver.find_element_by_css_selector('button[data-role-variant="ghost"] > div.css-raue2m.e1fx8g6d0')
-            driver.execute_script("arguments[0].click();", close_button)
-            print(' x out worked')
-        except NoSuchElementException:
-            print(' x out failed')
-            pass
+        
 
         done = False
         while not done:
             job_cards = driver.find_elements_by_xpath("//article[@id='MainCol']//ul/li[@data-adv-type='GENERAL']")
             for card in job_cards:
                 card.click()
+                processed_cards.add(card)
                 time.sleep(1)
                 
-
+                try:
+                    close_button = driver.find_element_by_css_selector('button[data-role-variant="ghost"] > div.css-raue2m.e1fx8g6d0')
+                    driver.execute_script("arguments[0].click();", close_button)
+                    print(' x out worked')
+                except NoSuchElementException:
+                    #print(' x out failed')
+                    pass
 
                 #Expands the Description section by clicking on Show More
                 try:
@@ -113,9 +115,16 @@ def get_jobs(keyword, num_pages, path, slp_time):
                     pass
 
                 try:
-                    salary_estimate.append(driver.find_element_by_xpath("//div[@class='css-1bluz6i e2u4hf13']").text)
+                    #salary_estimate.append(driver.find_element_by_xpath("//div[@class='css-1bluz6i e2u4hf13']").text)
+                    salary_estimate.append(driver.find_element_by_xpath("//span[@class='css-1xe2xww e1wijj242']").text)
+
                 except:
                     salary_estimate.append("#N/A")
+                    pass
+                try:
+                    rating.append(driver.find_element_by_xpath("//div[@class='mr-sm css-ey2fjr e1pr2f4f2']").text)
+                except:
+                    rating.append("#N/A")
                     pass
                     
                 try:
@@ -167,9 +176,11 @@ def get_jobs(keyword, num_pages, path, slp_time):
     return pd.DataFrame({'Job Title': job_title, 
     'Salary Estimate': salary_estimate,
     'Job Description': job_description,
+    'Rating': rating,
     'Company Name': company_name,
     'Location': location,
     'Size': company_size,
     'Founded': company_founded,
+    'Type of ownership': company_type, 'Industry' : company_industry,
     'Sector': company_sector,
-    'Revenue' : company_revenue, 'Industry' : company_industry, 'Type': company_type})
+    'Revenue' : company_revenue,})
