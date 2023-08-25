@@ -17,8 +17,8 @@ minus_Kd = salary.apply(lambda x: x.replace('K', '').replace('$', ''))
 min_hr = minus_Kd.apply(lambda x: x.lower().replace('per hour', '').replace('employer provided salary:', ''))
 
 # Min/Max/Average salary
-df['min_salary'] = min_hr.apply(lambda x: float(x.split('-')[0]))
-df['max_salary'] = min_hr.apply(lambda x: float(x.split('-')[1]))
+df['min_salary'] = min_hr.apply(lambda x: int(x.split('-')[0]))
+df['max_salary'] = min_hr.apply(lambda x: int(x.split('-')[1]))
 df['avg_salary'] = (df.min_salary + df.max_salary) / 2
 
 
@@ -58,6 +58,7 @@ df['excel'] = df['Job Description'].apply(lambda x: 1 if 'excel' in x.lower() el
 
 print(df.head(10))
 
+df = df.drop(['Unnamed: 0'], axis=1)
 
 df.to_csv("Clean_DataScientistSalary.csv", index=False)
 #print(minus_Kd)
