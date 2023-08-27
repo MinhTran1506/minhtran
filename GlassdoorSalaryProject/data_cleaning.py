@@ -1,12 +1,11 @@
 import pandas as pd
 import re
 
-
+# Importing data
 df = pd.read_csv('glassdoor_jobs.csv')
 df1 = pd.read_csv('glassdoor_jobs.csv')
 
 # Salary parsing
-
 df['Hourly'] = df['Salary Estimate'].apply(lambda x: 1 if 'per hour' in x.lower() else 0)
 df['Employer_provided'] = df['Salary Estimate'].apply(lambda x: 1 if 'employer provided' in x.lower() else 0)
 
