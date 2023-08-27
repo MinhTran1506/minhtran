@@ -50,9 +50,9 @@ After scraping the data, I needed to clean it up so that it was usable for our m
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
 ![alt text](https://github.com/MinhTran1506/minhtran/blob/main/GlassdoorSalaryProject/Images/salary_by_job_title.png "Salary by Position")
-![alt text](https://github.com/MinhTran1506/minhtran/tree/main/GlassdoorSalaryProject/Images/positions_by_state.png "Job Opportunities by State")
-![alt text](https://github.com/MinhTran1506/minhtran/tree/main/GlassdoorSalaryProject/Images/correlation_visual.png "Correlations")
-![alt text](https://github.com/MinhTran1506/minhtran/tree/main/GlassdoorSalaryProject/Images/wordcloud.png "Job Description Word Cloud")
+![alt text](https://github.com/MinhTran1506/minhtran/blob/main/GlassdoorSalaryProject/Images/positions_by_state.png "Job Opportunities by State")
+![alt text](https://github.com/MinhTran1506/minhtran/blob/main/GlassdoorSalaryProject/Images/correlation_visual.png "Correlations")
+![alt text](https://github.com/MinhTran1506/minhtran/blob/main/GlassdoorSalaryProject/Images/wordcloud.png "Job Description Word Cloud")
 
 ## Model Building 
 
